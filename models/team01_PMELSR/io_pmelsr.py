@@ -118,6 +118,7 @@ def model_ensemble(dir3):
 def all_remove(dir):
     import shutil
     shutil.rmtree(dir)
+    os.removedirs(dir.replace('test', '').replace('valid', ''))
     # list = os.listdir(dir)
     # for l in list:
     #     if l.endswith(ends):
