@@ -22,6 +22,6 @@ python test.py --test_dir results/01_PMELSR_ensemble \
 --model_id 1
 
 # all in one
-python test02.py --test_dir /home/wedream/mydata/srdata/DIV2K/DIV2K_test_LR_bicubic_X4_2025_mini \
+python test.py --test_dir /home/wedream/mydata/srdata/DIV2K/DIV2K_test_LR_bicubic_X4_2025_mini \
 --save_dir results02 \
 --model_id 1

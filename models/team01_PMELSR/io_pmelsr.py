@@ -147,6 +147,7 @@ def main(model_dir, input_path, output_path, device=None):
             results = json.load(f)
 
     model_dir = model_dir.replace('PMELSR_x4.pth', 'MambaIRv2_x4.pth')
+    output_path = output_path.replace('01_PMELSR', '01_MambaIRv2')
 
     # --------------------------------
     # load model
