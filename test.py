@@ -23,31 +23,11 @@ def select_model(args, device):
         model_func = DAT
     elif model_id == 1:
 
-        ###### first: run MambaIRv2
-        from models.team01_PMELSR.io_mambairv2 import main as MambaIRv2
-        name = f"{model_id:02}_MambaIRv2"
-        model_path = os.path.join('model_zoo', 'team01_PMELSR/MambaIRv2_x4.pth')
-        model_func = MambaIRv2
-
-        ###### second: run DAT
-        # from models.team01_PMELSR.io_dat import main as DAT
-        # name = f"{model_id:02}_DAT"
-        # model_path = os.path.join('model_zoo', 'team01_PMELSR/DAT_x4.pth')
-        # model_func = DAT
-
-        ###### Third: run HAT
-        # from models.team01_PMELSR.io_hat import main as HAT
-        # name = f"{model_id:02}_HAT"
-        # model_path = os.path.join('model_zoo', 'team01_PMELSR/HAT_x4.pth')
-        # model_func = HAT
-
-        ###### Fourth: python ensemble_PMELSR.py
-
-        ###### Fifth: run RRDBNet
-        # from models.team01_PMELSR.io_rrdb import main as RRDB
-        # name = f"{model_id:02}_RRDB"
-        # model_path = os.path.join('model_zoo', 'team01_PMELSR/RRDBNet_x4.pth')
-        # model_func = RRDB
+        ###### run PMELSR
+        from models.team01_PMELSR.io_pmelsr import main as PMELSR
+        name = f"{model_id:02}_PMELSR"
+        model_path = os.path.join('model_zoo', 'team01_PMELSR/PMELSR_x4.pth')
+        model_func = PMELSR
 
     else:
         raise NotImplementedError(f"Model {model_id} is not implemented.")

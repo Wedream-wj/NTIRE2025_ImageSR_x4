@@ -8,7 +8,7 @@
 git clone https://github.com/Wedream-wj/NTIRE2025_ImageSR_x4.git
 ```
 
-2. 使用MambaIRv2模型进行推理；如果觉得推理慢，可直接下载[谷歌云盘](https://drive.google.com/drive/u/1/folders/1hb54xTDWrduLQg223tY0c_BHB7GKGLWC)上的01_MambaIRv2.zip解压放置到results目录下
+2. 使用PMELSR模型进行推理，推理时间可能需要久一点
 
 ```bash
 python test.py --test_dir /home/wedream/mydata/srdata/DIV2K/DIV2K_test_LR_bicubic_X4_2025 \
@@ -16,34 +16,4 @@ python test.py --test_dir /home/wedream/mydata/srdata/DIV2K/DIV2K_test_LR_bicubi
 --model_id 1
 ```
 
-3. 使用DAT模型进行推理，取消test.py第33到36行的注释；如果觉得推理慢，可直接下载[谷歌云盘](https://drive.google.com/drive/u/1/folders/1hb54xTDWrduLQg223tY0c_BHB7GKGLWC)上的01_DAT.zip解压放置到results目录下
-
-```bash
-python test.py --test_dir /home/wedream/mydata/srdata/DIV2K/DIV2K_test_LR_bicubic_X4_2025 \
---save_dir results \
---model_id 1
-```
-
-4. 使用HAT模型进行推理，取消test.py第39到42行的注释；如果觉得推理慢，可直接下载[谷歌云盘](https://drive.google.com/drive/u/1/folders/1hb54xTDWrduLQg223tY0c_BHB7GKGLWC)上的01_HAT.zip解压放置到results目录下
-
-```bash
-python test.py --test_dir /home/wedream/mydata/srdata/DIV2K/DIV2K_test_LR_bicubic_X4_2025 \
---save_dir results \
---model_id 1
-```
-
-5. 进行模型集成，运行ensemble_PMELSR.py文件；如果觉得慢，可直接下载[谷歌云盘](https://drive.google.com/drive/u/1/folders/1hb54xTDWrduLQg223tY0c_BHB7GKGLWC)上的01_PMELSR_ensemble.zip解压放置到results目录下
-
-```bash
-python ensemble_PMELSR.py
-```
-
-6. 使用RRDBNet模型对集成的结果进一步细化，取消test.py第47到50行的注释；如果觉得推理慢，可直接下载[谷歌云盘](https://drive.google.com/drive/u/1/folders/1hb54xTDWrduLQg223tY0c_BHB7GKGLWC)上的01_RRDB.zip解压放置到results目录下
-
-```bash
-python test.py --test_dir results/01_PMELSR_ensemble \
---save_dir results \
---model_id 1
-```
-
-7. `/results/01_RRDB/test/`目录下即为最终提交结果
+3. `/results/01_PMELSR/test/`目录下即为最终提交结果

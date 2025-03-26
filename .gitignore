@@ -1,6 +1,8 @@
 model_zoo/team01_PMELSR/*.pth
 results/
 vis/
+README02.md
+test02.py
 
 .vscode
 
