@@ -16,4 +16,4 @@ python test.py --test_dir /home/wedream/mydata/srdata/DIV2K/DIV2K_test_LR_bicubi
 --model_id 1
 ```
 
-3. `/results/01_PMELSR/test/`目录下即为最终提交结果
+3. `./results/01_PMELSR/test/`目录下即为最终提交结果
